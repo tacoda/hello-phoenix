@@ -5,3 +5,7 @@ script:
   - mix local.hex --force
   - mix deps.get
   - mix test
+deploy:
+  provider: gae
+  keyfile: client-secret.json.enc
+  project: corded-forge-217101
