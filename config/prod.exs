@@ -16,6 +16,8 @@ config :hello, HelloWeb.Endpoint,
   server: true,
   root: ".",
   # url: [host: "example.com", port: 80],
+  url: [scheme: "https", host: "tacoda-hello-phoenix", port: 443],
+  force_ssl: [rewrite_on: [:x_forwarded_proto]],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
@@ -73,3 +75,13 @@ config :logger, level: :info
 # Finally import the config/prod.secret.exs which should be versioned
 # separately.
 # import_config "prod.secret.exs"
+
+config :hello, Hello.Repo,
+  username: "tacoda",
+  password: "uADm5pydHGmmZe",
+  database: "hello_dev",
+  hostname: "localhost",
+  pool_size: 10,
+  ssl: true,
+  url: database_url,
+  pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
