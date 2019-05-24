@@ -15,3 +15,4 @@ deploy:
   app: 'hello-phoenix'
   env: 'phoenix-environment'
   bucket_name: 'tacoda-hello-phoenix'
+  skip_cleanup: true
