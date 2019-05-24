@@ -14,5 +14,4 @@ deploy:
   region: us-east-1
   app: 'hello-phoenix'
   env: 'phoenix-environment'
-  on:
-    repo: tacoda/hello-phoenix
+  bucket_name: 'tacoda-hello-phoenix'
