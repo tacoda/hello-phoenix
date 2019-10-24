@@ -23,6 +23,12 @@ config :hello, HelloWeb.Endpoint,
 # Do not print debug messages in production
 config :logger, level: :info
 
+config :hello, HelloWeb.Repo,
+    adapter: Ecto.Adapters.Postgres,
+    url: System.get_env("DATABASE_URL"),
+    pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
+    ssl: true
+
 # config :teacher, Teacher.Endpoint,
 #   http: [port: {:system, "PORT"}],
 #   url: [scheme: "https", host: "rocky-depths-40660.herokuapp.com", port: 443],

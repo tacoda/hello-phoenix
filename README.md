@@ -28,4 +28,7 @@ $ heroku addons:create heroku-postgresql:hobby-dev
 $ heroku config:set POOL_SIZE=18
 $ mix phx.gen.secret
 $ heroku config:set SECRET_KEY_BASE=""
+# commit
+$ git push heroku master
+$ heroku run "POOL_SIZE=2 mix ecto.migrate"
 ```
