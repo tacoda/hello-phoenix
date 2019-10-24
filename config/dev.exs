@@ -75,8 +75,8 @@ config :phoenix, :plug_init_mode, :runtime
 #   pool_size: 10
 
 config :hello, Hello.Repo,
-  username: "tacoda",
-  password: "uADm5pydHGmmZe",
-  database: "hello_dev",
+  username: "postgres",
+  password: "postgres",
+  database: "hello_test",
   hostname: "localhost",
   pool_size: 10
