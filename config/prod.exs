@@ -12,6 +12,7 @@ use Mix.Config
 config :hello, HelloWeb.Endpoint,
   load_from_system_env: true,
   # https: [:inet6, port: 443],
+  http: [port: {:system, "PORT"}],
   check_origin: false,
   server: true,
   root: ".",
